@@ -1,0 +1,890 @@
+id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+name: Development
+type: 1
+canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+blocks:
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Loads and cleans AHRF county-level healthcare data (2022): standardizes
+    58 California county names, converts physician and population counts to numeric,
+    calculates physician rates per 10k/100k population, validates rate calculations,
+    and flags discrepancies.'
+  height: 1000
+  id: 0ab1fcc0-0a03-462c-ae83-58a69d2ba4b5
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "06 \xB7 AHRF Cleaning"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Summarizes county-level prioritization findings for California healthcare
+    access. Imperial County ranks #1 consistently; 9 counties stable in top-10 across
+    all scenarios. Rankings depend heavily on whether provider scarcity or social
+    vulnerability is weighted higher; linked HPSA designations validate most high-priority
+    counties.'
+  height: 1000
+  id: 0b132caa-01f0-492e-8a26-c5944ae91aad
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "19 \xB7 Milestone 4 Findings Summary"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 50000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Generates formatted submission package documentation for California
+    healthcare project. Prints concise project summary, extended description, problem
+    statement, five-milestone methodology, technical skills, and key findings using
+    consistent section formatting.
+  height: 1000
+  id: 0e6e8bc0-bd19-40fd-8144-65aaf91ed93f
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "21 \xB7 Submission Package"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 52000
+  y: 26800
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Loads and cleans CDC Social Vulnerability Index (SVI) data for California
+    counties. Standardizes column names, preserves FIPS codes, converts numeric fields,
+    replaces sentinel values (-999) with NaN, and normalizes county names for matching.
+    Validates 58 unique counties with no duplicates and all RPL percentiles in [0,1]
+    range.
+  height: 1000
+  id: 154ab461-f7f9-406d-a9f6-42522cfc781f
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "05 \xB7 SVI Cleaning"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Analyzes California's Social Vulnerability Index (SVI) by theme dimension\u2014\
+    identifying the dominant vulnerability factor (socioeconomic, household, racial/ethnic,\
+    \ or housing/transport) for each county. Creates a comparative visualization of\
+    \ SVI theme percentiles across notable counties with styled charts and summary\
+    \ tables."
+  height: 1000
+  id: 2756b78a-de0c-4012-b991-fc4bfd59eafe
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09f \xB7 SVI Theme Analysis"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 24000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Generates 6 exploratory visualizations comparing county healthcare
+    priority scores across 4 weighting scenarios, including rank movement, score distribution
+    by HPSA status, and relationships between provider scarcity and social vulnerability.
+  height: 1000
+  id: 2e3c4e4f-9ede-47f6-9691-562f0bf2afe0
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "17 \xB7 Milestone 4 Visualizations"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 46000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Joins SVI, AHRF, and HPSA datasets left-to-left by county FIPS code,
+    preserving all 58 CA counties. Creates unified healthcare access profile with
+    SVI vulnerability, primary care metrics, and HPSA designations in one table.
+  height: 1000
+  id: 31812505-1889-46bb-93cc-20a41c8d4c96
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "08 \xB7 County Join (SQL)"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Analyzes ranking consistency across four priority-scoring scenarios
+    for 58 counties. Identifies counties that rank consistently high (top 5/10), calculates
+    rank variability metrics, computes Spearman correlations between scenarios, and
+    measures top-10 overlap using Jaccard similarity to assess stability.
+  height: 1000
+  id: 31896c65-d131-4417-95ad-d404dff3fe02
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "13 \xB7 Ranking-Stability Analysis"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 38000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Loads & inspects CDC SVI California county 2022 dataset: validates
+    structure, confirms county-level FIPS codes, checks RPL theme & population fields,
+    detects -999 sentinel values & geographic coverage.'
+  height: 1000
+  id: 35c24db5-0f32-491c-8085-2b819f9df3e3
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "03a \xB7 Inspect SVI File"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 3000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Extracts and displays all field definitions from HPSA data dictionary
+    (100 fields) and SVI PDF documentation. Shows attribute names, data types, valid
+    values, definitions, and business rules for healthcare access analysis.
+  height: 1000
+  id: 3968df4a-c38f-4137-ab46-948d46154503
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "03d \xB7 Inspect Documentation Files"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 12000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Compares healthcare access metrics (physician density, social vulnerability
+    indices) between CA counties with and without Geo/Population HPSA designations
+    using descriptive statistics, Mann-Whitney U testing, and boxplots to visualize
+    differences across groups.
+  height: 1000
+  id: 40091869-d85e-4a1c-9b30-59dc535801bd
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09e \xB7 HPSA Comparison"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Filters national HPSA data for California's designated Primary Care
+    designations, classifies them as geographic/population or facility-based, then
+    aggregates to county level with HPSA counts, scores, and most recent update dates.
+  height: 1000
+  id: 4d03ee05-73c5-430f-bef3-24299a3c0919
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "07 \xB7 HPSA Filtering and County Aggregation"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Contextualizes balanced priority rankings by population scale. Creates\
+    \ a 2\xD72 planning grid splitting counties on priority score and population size\
+    \ to identify high-need/large-population counties vs. high-need/small-population\
+    \ counties, plus calculates what % of CA's population is represented in top-ranked\
+    \ counties and HPSA areas."
+  height: 1000
+  id: 52b15a9d-038c-43d4-80b0-532b069f9ec7
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "15 \xB7 Population Context"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 42000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Validates Milestone 4 data integrity for county priority scores and
+    rankings. Checks that all 58 counties have valid scores [0,1], proper rank completeness,
+    correct weight sums, provider/SVI data quality, and HPSA temporal separation from
+    composite scoring.
+  height: 1000
+  id: 5a4facb7-0424-4787-8f4c-be35e8faaf2f
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "18 \xB7 Milestone 4 Validation"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 48000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Validates Milestone 5 Streamlit dashboard deployment by running 25+
+    integrity checks on all datasets, scoring mechanisms, rankings, and application
+    structure across 58 California counties.
+  height: 1000
+  id: 5cbad59a-b782-4f33-8aea-297936349cea
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "20 \xB7 Dashboard Deployment Validation"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 52000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Computes four priority-scoring scenarios for California counties by
+    combining provider scarcity and SVI vulnerability metrics at different weights
+    (balanced, access-focused, equity-focused, and socioeconomic-empirical). Validates
+    all scores are in [0,1] range and weights sum to 1.0.
+  height: 1000
+  id: 630be0ea-aa25-4b62-a515-650a8b57685d
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "11 \xB7 Priority-Score Scenarios"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 34000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Computes and displays descriptive statistics (count, mean, median,
+    std, percentiles, skewness) for 11 key healthcare access and vulnerability metrics
+    across 58 California counties, with annotations on zero-value interpretation for
+    each field.
+  height: 1000
+  id: 6efdd786-3e17-4dcf-a4e6-9a1d796063f0
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09a \xB7 Descriptive Statistics"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 14000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Analyzes population distribution across healthcare vulnerability/access
+    quadrants. Shows county-based vs population-based perspectives with summary statistics
+    (count, percentage, SVI, physician rates) and visualization comparing how resource
+    gaps differ when weighing by # of counties vs # of residents.'
+  height: 1000
+  id: 700fe6e4-0e79-42b9-9aa8-89254e302985
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09h \xB7 Population Context"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 28000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Analyzes correlations between physician supply rate and 7 variables
+    (SVI themes, population, HPSA score). Computes Pearson & Spearman correlations
+    with p-values across 58 CA counties, flags non-linear outliers, and tests sensitivity
+    to extreme cases (Alpine/Sierra counties).
+  height: 1000
+  id: 758da4ee-ba8e-4644-a9e8-f71362af4251
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09d \xB7 Correlation Analysis"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Defines the analytical framework for examining primary-care physician
+    density across California counties (2022) in relation to social vulnerability
+    (SVI) and health professional shortage areas.
+  height: 1000
+  id: 7b5d9c1c-db7e-4d18-a560-a8630e2dfb3a
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09 \xB7 Exploratory Analysis Overview"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 12000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Validates the complete join of 58 California counties across SVI vulnerability
+    data, AHRF healthcare provider counts, and HPSA designations. Confirms data integrity
+    (no duplicates, all 58 matched), validates value ranges for SVI percentiles [0,1]
+    and HPSA scores [0,25], compares population sources (ACS vs Census), and audits
+    join quality with a detailed data dictionary documenting 22 final columns and
+    cleanup decisions.
+  height: 1000
+  id: 91e894a3-cff1-4f1b-bb8d-94f46a246ab1
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "08b \xB7 Join Validation and Documentation"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Maps AHRF county records to FIPS codes by matching standardized county
+    names against SVI dataset. Validates exact 1:1 matches for all 58 counties and
+    flags mismatches or duplicates.
+  height: 1000
+  id: 93abfe79-a23e-46f0-ac1a-fb94b651d063
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "06b \xB7 AHRF-to-FIPS Mapping"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Inspects HRSA Primary Care HPSA national dataset (79K rows, 66 columns)
+    and profiles California subset (8.2K rows). Validates key fields, analyzes designation
+    types, HPSA scores, county coverage, and identifies 1.4K unique HPSA IDs with
+    duplicates across counties. Confirms all required fields present and data quality
+    metrics.
+  height: 1000
+  id: 93e8b810-2547-4515-a8e6-28a6a757eb6e
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "03c \xB7 Inspect HPSA CSV File"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 9000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Identifies candidate California counties for closer healthcare access\
+    \ review by evaluating five exploratory conditions: SVI above/top-quartile, physician\
+    \ rate below median/bottom-quartile, and current HPSA status. Flags counties meeting\
+    \ \u22652 conditions."
+  height: 1000
+  id: 9747b1b2-e0c8-4308-b40c-f65fda9d2dd8
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09g \xB7 Candidate Counties for Closer Review"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 26000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Loads and inspects HRSA AHRF primary care physician dataset for California
+    counties (2022). Identifies correct header row, removes blank rows and footer
+    notes, then displays full dataset with summary statistics, data types, null counts,
+    and highlights counties with zero physicians.
+  height: 1000
+  id: 9b9ff39d-ea88-452b-b564-a82464e99e46
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "03b \xB7 Inspect AHRF Excel File"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 6000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Creates a consolidated results table ranking California's 58 counties
+    by balanced exploratory priority, combining provider scarcity, social vulnerability,
+    and access metrics. Displays top/bottom performers, sensitivity analysis, and
+    highlights counties with high ranking volatility.
+  height: 1000
+  id: 9e89acb0-50a4-47d2-ba45-ebab6ae4ced9
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "14 \xB7 Primary Results Table"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 40000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Ranks 58 counties across four investment scenarios (balanced, access-focused,\
+    \ equity-focused, empirical themes) by priority score. Creates long-form ranking\
+    \ table with counties sorted 1\u201358 per scenario, breaking ties alphabetically\
+    \ for consistent display."
+  height: 1000
+  id: 9f24d220-06ca-47f0-b129-532bb202777e
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "12 \xB7 Scenario Rankings"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 36000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Creates 5 distribution visualizations of California healthcare access
+    metrics: physician density per 10,000 residents, overall SVI (social vulnerability),
+    four SVI sub-themes, physician counts, and county populations. Identifies outliers
+    including zero-physician counties, anomalous rates, and small/large population
+    centers.'
+  height: 1000
+  id: a7c82d67-d3d0-436c-b971-b1d4aa82984a
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09b \xB7 Distribution Analysis"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 16000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Project roadmap identifying California counties where social vulnerability
+    overlaps with limited primary-care physician access, using CDC SVI and HRSA data
+    to inform public-health resource planning and funding decisions.
+  height: 1000
+  id: aac07386-a21d-473e-9e74-4b59d1bdbb71
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "01 \xB7 Project Overview"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Pre-submission validation checklist for a healthcare access priority
+    dashboard. Covers deployment verification, tab functionality, county data accuracy,
+    responsible use disclaimers, form content alignment, and data security before
+    final HackerEarth submission.
+  height: 1000
+  id: ad698eb3-d5ed-4e5e-bea0-fffb18cd37e2
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "21b \xB7 Final Submission Checklist"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 54000
+  y: 26800
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Consolidates healthcare access data quality findings from SVI, AHRF,
+    and HPSA sources. Re-loads CA county datasets and audits file inventory, missing
+    values, geographic coverage, FIPS harmonization, duplicates, and reporting periods
+    to ensure data integrity before analysis.
+  height: 1000
+  id: b5683829-363f-4f09-9816-bfd5d44e2cb3
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "04 \xB7 Data Quality Audit"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 15000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Creates a comprehensive data dictionary documenting all fields across
+    three analytical datasets: CDC SVI (social vulnerability), AHRF (physician workforce),
+    and HRSA HPSA (healthcare shortage areas). Includes field names, data types, descriptions,
+    and critical business rules for proper joining and analysis.'
+  height: 1000
+  id: c36a5b0e-a638-4d8b-ad9d-63925407420b
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "02 \xB7 Working Data Dictionary"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 18000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Roadmap documenting all 14 sections of the analysis workflow: sections\
+    \ 01\u201304 (implemented) covering project setup, raw file inspection, and quality\
+    \ audit; and proposed sections 05\u201314 for cleaning, joining, scoring, visualization,\
+    \ and findings. Includes dependencies, transformations, and output specifications\
+    \ for each step."
+  height: 1000
+  id: c71b18df-67c4-4068-adc5-ee6e5e48574e
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "02 \xB7 Proposed Canvas Workflow"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 21000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Validates California county healthcare data integrity across 58 rows:\
+    \ checks for duplicate-free FIPS codes, zero vs NaN physician counts, valid rate\
+    \ ranges, SVI percentile values (0\u20131), and reproducible quadrant/condition\
+    \ assignments from medians and thresholds."
+  height: 1000
+  id: ce7ace3c-8b79-4915-94da-b18f265936df
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09i \xB7 Data-Quality Checks"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 30000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: 'Interactive Streamlit dashboard exploring the overlap between social
+    vulnerability and primary-care physician scarcity across California''s 58 counties.
+    Features 5 tabs: overview KPI metrics, county profiles, scenario-based priority
+    comparisons, HPSA alignment analysis, and methodology. Uses balanced (50% provider
+    scarcity + 50% SVI) and alternative weighting scenarios to identify exploratory
+    priority areas for healthcare resource planning.'
+  height: 1000
+  id: e2bcc844-d3a1-4362-85ce-a153cedc8a87
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "20b \xB7 Application README"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 28400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: ''
+  height: 1000
+  id: e5ef6de4-76f2-40be-8bcf-2e3b03c38698
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09j \xB7 Milestone 3 Findings Summary"
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 32000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Calculates a provider scarcity score (0\u20131) for each of California's\
+    \ 58 counties by ranking physician density and reversing it, with validation checks\
+    \ for zero-physician counties and outlier values."
+  height: 1000
+  id: eba6987f-61d6-4220-b51a-1f72f5812a59
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "10 \xB7 Provider-Scarcity Measure"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 32000
+  y: 25400
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: "Visualizes California counties as a 2\xD72 scatterplot mapping social\
+    \ vulnerability (SVI) against primary-care physician access, with quadrant zones\
+    \ identifying where high vulnerability overlaps with low provider access. Annotates\
+    \ key counties and flags HPSA-designated areas."
+  height: 1000
+  id: f3aad088-5290-40c6-8d52-deebda7dcc8b
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "09c \xB7 Vulnerability vs Provider Access Scatterplot"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 18000
+  y: 24000
+- auto_size: false
+  canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  compute_settings: null
+  description: Categorizes CA counties into four alignment groups based on historical
+    priority ranking (top quartile threshold) and current HPSA designation status,
+    then summarizes statistics by category to identify disagreements between the two
+    measures.
+  height: 1000
+  id: f478c062-8a5b-49b8-8883-ca32ba656a6d
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  name: "16 \xB7 HPSA Alignment Analysis"
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 44000
+  y: 25400
+edges:
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 080e1f36-9488-4f44-b235-fdcd49645081
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: eba6987f-61d6-4220-b51a-1f72f5812a59
+  target: 630be0ea-aa25-4b62-a515-650a8b57685d
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 0ad275fe-239e-47cc-8165-0ea9b972f905
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 6efdd786-3e17-4dcf-a4e6-9a1d796063f0
+  target: a7c82d67-d3d0-436c-b971-b1d4aa82984a
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 171c6c44-f99d-4245-8d31-2588c0fad30d
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 40091869-d85e-4a1c-9b30-59dc535801bd
+  target: 2756b78a-de0c-4012-b991-fc4bfd59eafe
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 1ba9cb89-579c-4a00-bd88-6b807cb08185
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 7b5d9c1c-db7e-4d18-a560-a8630e2dfb3a
+  target: 6efdd786-3e17-4dcf-a4e6-9a1d796063f0
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 1e5cde50-6700-4a55-9dbd-6423a1084bbc
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 9f24d220-06ca-47f0-b129-532bb202777e
+  target: 31896c65-d131-4417-95ad-d404dff3fe02
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 2c070bad-b220-467c-9b5c-b277e98f6511
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 154ab461-f7f9-406d-a9f6-42522cfc781f
+  target: 0ab1fcc0-0a03-462c-ae83-58a69d2ba4b5
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 33e0e055-00e7-4a8a-9bad-d0e81951fdbd
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 4d03ee05-73c5-430f-bef3-24299a3c0919
+  target: 31812505-1889-46bb-93cc-20a41c8d4c96
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 4bf668bf-971e-4964-98db-0a1b6e87c648
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: f478c062-8a5b-49b8-8883-ca32ba656a6d
+  target: 2e3c4e4f-9ede-47f6-9691-562f0bf2afe0
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 4d07b112-d560-41d3-b67e-37c5bcb030ad
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 91e894a3-cff1-4f1b-bb8d-94f46a246ab1
+  target: 7b5d9c1c-db7e-4d18-a560-a8630e2dfb3a
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 5d569c14-88f3-4738-b580-328f7deab37b
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 9e89acb0-50a4-47d2-ba45-ebab6ae4ced9
+  target: 52b15a9d-038c-43d4-80b0-532b069f9ec7
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 5e7ddee2-0cd9-4f5b-a70d-29b79246cbb9
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 5a4facb7-0424-4787-8f4c-be35e8faaf2f
+  target: 0b132caa-01f0-492e-8a26-c5944ae91aad
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 6c992c91-0042-4e6f-9057-c0007b285a66
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 93abfe79-a23e-46f0-ac1a-fb94b651d063
+  target: 4d03ee05-73c5-430f-bef3-24299a3c0919
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 74c2e835-77aa-4221-bdd7-af5be576a762
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 52b15a9d-038c-43d4-80b0-532b069f9ec7
+  target: f478c062-8a5b-49b8-8883-ca32ba656a6d
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 8bda3b82-80dd-42c9-94c9-b3c77fb8cc61
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 2756b78a-de0c-4012-b991-fc4bfd59eafe
+  target: 9747b1b2-e0c8-4308-b40c-f65fda9d2dd8
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 962d94c7-7bf8-4530-8a4b-bcd63503741e
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: ce7ace3c-8b79-4915-94da-b18f265936df
+  target: e5ef6de4-76f2-40be-8bcf-2e3b03c38698
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 970c6443-bfe1-44c1-8307-1d256a6bad5e
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: f3aad088-5290-40c6-8d52-deebda7dcc8b
+  target: 758da4ee-ba8e-4644-a9e8-f71362af4251
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 983b7030-9e84-449d-94df-81e2ac5fb206
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 0b132caa-01f0-492e-8a26-c5944ae91aad
+  target: 5cbad59a-b782-4f33-8aea-297936349cea
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: 9cc6dde5-f94d-4aa0-bf82-4df6787a5d7b
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 31896c65-d131-4417-95ad-d404dff3fe02
+  target: 9e89acb0-50a4-47d2-ba45-ebab6ae4ced9
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: a78cc52e-0fff-4472-9b3b-818a3cf2bcc6
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 0b132caa-01f0-492e-8a26-c5944ae91aad
+  target: 0e6e8bc0-bd19-40fd-8144-65aaf91ed93f
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: adc18f5c-e6b3-4b67-8c59-114ded8b0854
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 9747b1b2-e0c8-4308-b40c-f65fda9d2dd8
+  target: 700fe6e4-0e79-42b9-9aa8-89254e302985
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: b0fae6f9-d639-4fcb-a27a-c7ecd4935931
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 31812505-1889-46bb-93cc-20a41c8d4c96
+  target: 91e894a3-cff1-4f1b-bb8d-94f46a246ab1
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: b573d1b4-d799-4d28-8e77-3badfae626b8
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 700fe6e4-0e79-42b9-9aa8-89254e302985
+  target: ce7ace3c-8b79-4915-94da-b18f265936df
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: b80c9c26-911e-4c20-a935-9d029773927d
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 2e3c4e4f-9ede-47f6-9691-562f0bf2afe0
+  target: 5a4facb7-0424-4787-8f4c-be35e8faaf2f
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: b8f00fe8-273a-46a7-af3d-f41a898fd1b7
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: ce7ace3c-8b79-4915-94da-b18f265936df
+  target: eba6987f-61d6-4220-b51a-1f72f5812a59
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: c9a8f788-14ef-463d-86d0-d810a69fb225
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 630be0ea-aa25-4b62-a515-650a8b57685d
+  target: 9f24d220-06ca-47f0-b129-532bb202777e
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: cb34afd1-6578-4072-b7fd-df2dea15ee11
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 0ab1fcc0-0a03-462c-ae83-58a69d2ba4b5
+  target: 93abfe79-a23e-46f0-ac1a-fb94b651d063
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: d1c3d075-9e40-48f8-b184-b4356c88f9ee
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 758da4ee-ba8e-4644-a9e8-f71362af4251
+  target: 40091869-d85e-4a1c-9b30-59dc535801bd
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: e4c020de-e1f5-48a3-90c7-fa1309f0f3bf
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: 0e6e8bc0-bd19-40fd-8144-65aaf91ed93f
+  target: ad698eb3-d5ed-4e5e-bea0-fffb18cd37e2
+- canvas_id: 64d4dcd4-4203-4a94-8ae3-87a6514fe88b
+  id: fa4c744e-44de-4a79-afee-05a535978b15
+  layer_id: 8cfcb441-b9ae-46d5-a3e9-e866f92c86a5
+  source: a7c82d67-d3d0-436c-b971-b1d4aa82984a
+  target: f3aad088-5290-40c6-8d52-deebda7dcc8b
