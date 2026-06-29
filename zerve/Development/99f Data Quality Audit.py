@@ -1,5 +1,5 @@
 """
-Section 04 — Data Quality Audit
+Data Quality Audit
 Consolidates findings from blocks 03a–03d into a structured audit summary.
 All source data is re-loaded here so this block is self-contained.
 """

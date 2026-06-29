@@ -7,7 +7,7 @@ r_global_imports: ''
 requirements: []
 linux_packages: []
 environment_variables: []
-is_public: false
+is_public: true
 organization_id: a41d4f49-23c4-4010-9222-d0e8f4d01e65
 layers:
 - blocks:
@@ -71,9 +71,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: 'Loads & inspects CDC SVI California county 2022 dataset: validates
-      structure, confirms county-level FIPS codes, checks RPL theme & population fields,
-      detects -999 sentinel values & geographic coverage.'
+    description: Inspects raw CDC SVI California county-level 2022 data. Displays
+      file structure, column inventory, key field presence, geographic coverage, record-level
+      validation, sentinel values (-999), RPL theme statistics, population totals,
+      and data quality checks.
     height: 1000
     id: 111b6e99-d91a-4515-9efd-f69d7d01d5d1
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -108,9 +109,9 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Defines the analytical framework for examining primary-care physician
-      density across California counties (2022) in relation to social vulnerability
-      (SVI) and health professional shortage areas.
+    description: Defines the analytical framework for county-level study of primary-care
+      physician supply and social vulnerability in California using 2022 CDC/AHRF
+      data and SVI percentiles as the principal vulnerability measure.
     height: 1000
     id: 35bbb5d7-cd3a-43f5-9cf0-df7051930c74
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -126,11 +127,12 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: 'Summarizes county-level prioritization findings for California healthcare
-      access. Imperial County ranks #1 consistently; 9 counties stable in top-10 across
-      all scenarios. Rankings depend heavily on whether provider scarcity or social
-      vulnerability is weighted higher; linked HPSA designations validate most high-priority
-      counties.'
+    description: "Presents key findings from California county prioritization framework:\
+      \ Imperial County ranks #1 across all scenarios; 9 counties consistently top-10;\
+      \ 13 counties' ranks shift \u226510 positions by scenario; all scenarios highly\
+      \ correlated (r>0.89); ethical guidance emphasizes this is an exploratory tool,\
+      \ not a funding formula, due to limitations in county-level data and physician-only\
+      \ measures."
     height: 1000
     id: 4753193f-9a3a-4d84-a408-3bd7e75c7ceb
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -165,11 +167,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Loads and cleans CDC Social Vulnerability Index (SVI) data for California
-      counties. Standardizes column names, preserves FIPS codes, converts numeric
-      fields, replaces sentinel values (-999) with NaN, and normalizes county names
-      for matching. Validates 58 unique counties with no duplicates and all RPL percentiles
-      in [0,1] range.
+    description: Loads and cleans CDC SVI (Social Vulnerability Index) data for California
+      counties. Selects key columns, converts numeric fields, standardizes county
+      names, and validates data integrity including FIPS codes, percentile ranges,
+      and population values.
     height: 1000
     id: 5696b14b-ca4b-4923-a581-bc4c894d3751
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -185,10 +186,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Consolidates healthcare access data quality findings from SVI, AHRF,
-      and HPSA sources. Re-loads CA county datasets and audits file inventory, missing
-      values, geographic coverage, FIPS harmonization, duplicates, and reporting periods
-      to ensure data integrity before analysis.
+    description: Consolidates data quality findings from three healthcare access datasets
+      (SVI, AHRF, HPSA) into a structured audit. Documents file inventory, null values,
+      geographic coverage, duplicates, FIPS field candidates, and join strategies
+      to enable reliable cross-dataset analysis.
     height: 1000
     id: 56af0e4f-43fd-4037-9f58-325bc1301a89
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -241,9 +242,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Extracts and displays all field definitions from HPSA data dictionary
-      (100 fields) and SVI PDF documentation. Shows attribute names, data types, valid
-      values, definitions, and business rules for healthcare access analysis.
+    description: 'Inspects and displays raw documentation files: extracts all 100
+      field definitions from HPSA data dictionary Excel sheet with attributes, data
+      types, and business rules; extracts and displays full text from CDC SVI data
+      dictionary PDF.'
     height: 1000
     id: 736530b2-a992-4da6-8a01-457f9a841348
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -357,10 +359,9 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: 'Creates a comprehensive data dictionary documenting all fields across
-      three analytical datasets: CDC SVI (social vulnerability), AHRF (physician workforce),
-      and HRSA HPSA (healthcare shortage areas). Includes field names, data types,
-      descriptions, and critical business rules for proper joining and analysis.'
+    description: Comprehensive reference guide documenting all fields across three
+      healthcare datasets (SVI, AHRF, HPSA) with data types, definitions, caveats,
+      and join keys for California healthcare access analysis.
     height: 1000
     id: 9260cf96-2b56-40a7-9732-e3abd301aee4
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -415,10 +416,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Filters national HPSA data for California's designated Primary Care
-      designations, classifies them as geographic/population or facility-based, then
-      aggregates to county level with HPSA counts, scores, and most recent update
-      dates.
+    description: Filters HPSA primary care designations for California to "Designated"
+      status, classifies them into Geographic/Population vs. Facility types, and aggregates
+      to county-level counts of distinct HPSA IDs with max/min scores and most recent
+      update dates.
     height: 1000
     id: a509034f-6bcb-45a2-bae8-134a23365337
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -473,9 +474,11 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Validates Milestone 5 Streamlit dashboard deployment by running 25+
-      integrity checks on all datasets, scoring mechanisms, rankings, and application
-      structure across 58 California counties.
+    description: 'Validates that the Milestone 5 Streamlit dashboard deployment meets
+      all data integrity and structural requirements: confirms 58 counties with complete
+      scores, rank integrity, HPSA temporal separation, scenario weights, SVI ranges,
+      and application structure (5 tabs). Flags zero-provider edge cases (Alpine,
+      Sierra) and exports validation summary.'
     height: 1000
     id: b03d097e-26c6-43d7-b204-82d3e64d9bc1
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -491,10 +494,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Loads and inspects HRSA AHRF primary care physician dataset for California
-      counties (2022). Identifies correct header row, removes blank rows and footer
-      notes, then displays full dataset with summary statistics, data types, null
-      counts, and highlights counties with zero physicians.
+    description: Loads and inspects a HRSA AHRF Excel file containing California county
+      primary care physician data for 2022. Validates header row location, removes
+      blank rows and footer notes, displays all data, summary statistics, and identifies
+      counties with zero physicians.
     height: 1000
     id: b28e8c1a-2481-42bf-95ac-420263881c10
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -531,10 +534,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: 'Loads and cleans AHRF county-level healthcare data (2022): standardizes
-      58 California county names, converts physician and population counts to numeric,
-      calculates physician rates per 10k/100k population, validates rate calculations,
-      and flags discrepancies.'
+    description: Cleans and standardizes AHRF primary care physician data for 58 California
+      counties. Loads Excel file, removes footers, renames columns, converts to numeric
+      types, standardizes county names, and calculates physician rates per 10,000
+      and 100,000 population with validation checks.
     height: 1000
     id: c31cc066-ba7a-46f0-81b4-cbe4f6e05b73
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -550,9 +553,10 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Project roadmap identifying California counties where social vulnerability
-      overlaps with limited primary-care physician access, using CDC SVI and HRSA
-      data to inform public-health resource planning and funding decisions.
+    description: Project overview for identifying California counties with high social
+      vulnerability and limited primary-care physician capacity to guide healthcare
+      resource planning and funding allocation across public health and nonprofit
+      organizations.
     height: 1000
     id: c5e7a01e-5f40-4414-8421-fb7015ae5826
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -661,11 +665,9 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Inspects HRSA Primary Care HPSA national dataset (79K rows, 66 columns)
-      and profiles California subset (8.2K rows). Validates key fields, analyzes designation
-      types, HPSA scores, county coverage, and identifies 1.4K unique HPSA IDs with
-      duplicates across counties. Confirms all required fields present and data quality
-      metrics.
+    description: Inspects HRSA Primary Care HPSA national dataset, analyzing structure,
+      field completeness, and key metrics for California records including designation
+      types, HPSA scores, population estimates, and geographic/county coverage.
     height: 1000
     id: e590b837-0129-4dc0-bd84-417b6a6f24a5
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c

@@ -31,5 +31,15 @@ Public-health program managers · Healthcare network planners · Nonprofit fundi
 > resource-allocation recommendations, or clinical policy guidance.
 > No causal claims are made. All limitations are documented in section 14.
 
-## Milestone Scope (Current)
-**Milestone 1 — Audit only.** Sections 01–02 (overview + documentation) and 03–04 (raw inspection + quality audit) are complete. Sections 05–14 (cleaning, joining, scoring, visualizations, dashboard) are proposed but not yet implemented.
+## Project Scope — Final Submission
+
+All five project milestones are complete:
+
+1. Source audit and documentation
+2. Data cleaning, identifier standardization, and county-level integration
+3. Exploratory analysis
+4. Priority scoring and sensitivity analysis
+5. Interactive dashboard deployment and validation
+
+Sections 03–14 contain the final analytical workflow and presentation.
+Section 99 contains supporting inspections, detailed analyses, and validation evidence.

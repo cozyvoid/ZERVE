@@ -1,5 +1,5 @@
 """
-Section 03 — Raw File Inspection
+Raw File Inspection
 Block 03b: HRSA AHRF California County Primary Care Physicians 2022
 
 FINDINGS (from raw scan):

@@ -1,4 +1,4 @@
-# 09 · Exploratory Analysis Overview
+# Exploratory Analysis Overview
 
 ## Unit of Analysis
 Each row is one **California county** (n = 58).

@@ -1,5 +1,5 @@
 """
-20 · Dashboard Deployment Validation
+Dashboard Deployment Validation
 Confirms all Milestone 5 requirements are met by the deployed Streamlit application.
 population_impact_context uses county_name (not county_fips) as identifier.
 """

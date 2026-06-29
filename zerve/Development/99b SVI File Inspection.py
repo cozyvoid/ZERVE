@@ -1,5 +1,5 @@
 """
-Section 03 — Raw File Inspection
+Raw File Inspection
 Block 03a: CDC/ATSDR SVI California County 2022
 """
 import pandas as pd

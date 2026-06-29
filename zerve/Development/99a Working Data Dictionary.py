@@ -1,6 +1,5 @@
 """
-Section 02 — Source Documentation
-Block 02: Working Data Dictionary
+Working Data Dictionary
 Concise reference for every field needed across all three analytical datasets.
 Built from:
   - SVI PDF documentation (2022)

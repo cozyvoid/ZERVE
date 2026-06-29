@@ -1,5 +1,5 @@
 """
-Section 03 — Raw File Inspection
+Raw File Inspection
 Block 03c: HRSA Primary Care HPSA National File (downloaded 2026-06-25)
 """
 import pandas as pd

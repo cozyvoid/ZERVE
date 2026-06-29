@@ -1,4 +1,4 @@
-# 19 · Milestone 4 — Findings Summary
+# Final Findings and Responsible Use
 
 > **Scope of this milestone:** Exploratory county-level prioritization framework for California.  
 > All scores are relative to California's 58 counties and do not represent official resource-allocation decisions.  
@@ -12,8 +12,7 @@
 
 **Three counties are in the top 5 under all four scenarios:** Imperial, Kings, and Merced.  
 **Nine counties appear in the top 10 under all four scenarios:** Imperial, Merced, Kings, Yuba, Glenn, Kern, Tulare, Lake, and Colusa.  
-**Ten counties remain in the top quartile (rank ≤ 14) under all four scenarios,** adding Mariposa, San Benito, and Trinity to the group above.
-
+**Ten counties remain in the top quartile under all four scenarios: Imperial, Merced, Kings, Yuba, Glenn, Kern, Tulare, Lake, Colusa, and Madera.
 ---
 
 ## 2. Counties whose ranks depend heavily on the weighting choice
@@ -65,7 +64,7 @@ The county-count framing identifies predominantly **smaller, rural, and agricult
 
 **Category A (high historical priority + current HPSA):** 10 counties — the majority of the top quartile is HPSA-designated, indicating general alignment.
 
-**Category B (high historical priority, NO current geo/pop HPSA):** 4 counties — **Yuba, Colusa, Mariposa, and Trinity**. These counties score in the top 14 historically but lack an active geographic/population HPSA. This warrants closer attention, though possible explanations include: sub-county provider distribution that satisfies HPSA adequacy criteria at the designation level; different provider types included in HPSA criteria beyond AHRF physician count; near-threshold positions; or the 4-year gap between the 2022 data and the 2026 HPSA snapshot.
+**Category B (high historical priority, NO current geo/pop HPSA):** 4 counties — **Yuba, Colusa, Madera, and Lassen**. These counties score in the top 14 historically but lack an active geographic/population HPSA. This warrants closer attention, though possible explanations include: sub-county provider distribution that satisfies HPSA adequacy criteria at the designation level; different provider types included in HPSA criteria beyond AHRF physician count; near-threshold positions; or the 4-year gap between the 2022 data and the 2026 HPSA snapshot.
 
 **Category C (current HPSA, lower historical priority):** 24 counties — these designations likely reflect sub-county geographic areas, specific population-group HPSAs (e.g. migrant workers, low-income populations), or earlier designation criteria. They should not be dismissed; they indicate the HPSA system captures dimensions the county-level physician-count measure does not.
 
