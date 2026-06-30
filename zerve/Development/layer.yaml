@@ -17,7 +17,7 @@ blocks:
   name: 99h SVI Theme Analysis
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -36,7 +36,7 @@ blocks:
   name: 06 Priority-Score Scenarios
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -54,7 +54,7 @@ blocks:
   name: 03c AHRF-to-FIPS Mapping
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -73,7 +73,7 @@ blocks:
   name: 99b SVI File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -92,7 +92,7 @@ blocks:
   name: 04e Population Context
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -148,7 +148,7 @@ blocks:
   name: 12 Final Visualizations
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -157,17 +157,17 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: Loads and cleans CDC SVI (Social Vulnerability Index) data for California
-    counties. Selects key columns, converts numeric fields, standardizes county names,
-    and validates data integrity including FIPS codes, percentile ranges, and population
-    values.
+  description: Loads and cleans CDC Social Vulnerability Index (SVI) data for California
+    counties. Standardizes column names, converts numeric values, validates FIPS codes,
+    handles missing values, and normalizes county names for downstream matching. Outputs
+    a verified dataset with 58 CA counties and SVI vulnerability percentile scores.
   height: 1000
   id: 5696b14b-ca4b-4923-a581-bc4c894d3751
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
   name: 03a SVI Cleaning
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -186,7 +186,7 @@ blocks:
   name: 99f Data Quality Audit
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -204,7 +204,7 @@ blocks:
   name: 03e County-Level Left Join
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -223,7 +223,7 @@ blocks:
   name: 11 HPSA Alignment
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -232,17 +232,17 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: 'Inspects and displays raw documentation files: extracts all 100 field
-    definitions from HPSA data dictionary Excel sheet with attributes, data types,
-    and business rules; extracts and displays full text from CDC SVI data dictionary
-    PDF.'
+  description: "Inspects two healthcare access documentation files\u2014the HRSA HPSA\
+    \ data dictionary (100 fields with definitions, valid values, data types) and\
+    \ the CDC SVI 2022 data dictionary PDF (vulnerability indices by geography)\u2014\
+    to catalog field metadata and enable targeted lookups."
   height: 1000
   id: 736530b2-a992-4da6-8a01-457f9a841348
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
   name: 99e Inspect Documentation Files
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -270,15 +270,15 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: 'Creates 5 distribution visualizations of California healthcare access
-    metrics: physician density per 10,000 residents, overall SVI (social vulnerability),
-    four SVI sub-themes, physician counts, and county populations. Identifies outliers
-    including zero-physician counties, anomalous rates, and small/large population
-    centers.'
+  description: 'Visualizes physician access distribution across California counties
+    through 5 charts: (1) physician rate histogram with median, (2) bar chart of counties
+    at highest/lowest social vulnerability, (3) heatmap of vulnerability dimensions
+    by county, (4) raw physician count distribution, and (5) county population spread.
+    Identifies zero-physician counties, outliers, and inequities.'
   height: 1000
   id: 7814c754-f617-4bb9-863e-dbb8a90d5808
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
-  name: 04a Physician Access Distribution
+  name: 04a Access and Vulnerability Visualizations
   parent_id: null
   properties: {}
   status: 1
@@ -300,7 +300,7 @@ blocks:
   name: 99j Exploratory Data-Quality Checks
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -319,7 +319,7 @@ blocks:
   name: 08 Ranking-Stability
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -341,7 +341,7 @@ blocks:
   name: 99k Analytical Validation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -360,7 +360,7 @@ blocks:
   parent_id: null
   properties:
     interactive_execution: true
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -379,7 +379,7 @@ blocks:
   name: 04b Vulnerability and Provider Access
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -398,7 +398,7 @@ blocks:
   name: 99i Exploratory Candidate Conditions
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -407,17 +407,16 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: Filters national HPSA primary care data for California, aggregates
-    by county-level designations (geographic/population and facility-based), and counts
-    distinct HPSAs per type. Returns county-level dataset with HPSA indicators, counts,
-    max/min scores, and rural status.
+  description: "Filters national HPSA data to California designated primary care designations,\
+    \ classifies them as geographic/population or facility-based, then aggregates\
+    \ by county\u2014counting distinct HPSA IDs and tracking min/max scores per type."
   height: 1000
   id: a509034f-6bcb-45a2-bae8-134a23365337
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
   name: 03d HPSA Filtering and County Aggregation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -437,7 +436,7 @@ blocks:
   name: 10 Population Impact Context
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -456,7 +455,7 @@ blocks:
   name: 04d HPSA Descriptive Comparison
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -474,7 +473,7 @@ blocks:
   name: 99l Deployment Validation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -493,7 +492,7 @@ blocks:
   name: 99c AHRF File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -514,7 +513,7 @@ blocks:
   name: 03F Join Validation and Documentation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -523,17 +522,17 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: 'Loads and cleans California county-level AHRF primary care physician
-    data (2022): standardizes county names, converts numerics, calculates provider
-    rates per 10k/100k population, validates against supplied rates, and produces
-    a clean dataset with 58 counties.'
+  description: 'Loads and cleans California AHRF county-level healthcare data: standardizes
+    county names, converts numeric columns, calculates primary care physician rates
+    per 10,000 population, validates against supplied rates, and produces a cleaned
+    dataset with 58 counties.'
   height: 1000
   id: c31cc066-ba7a-46f0-81b4-cbe4f6e05b73
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
   name: 03b AHRF Cleaning
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -588,7 +587,7 @@ blocks:
   name: 04c Correlation Analysis
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -624,7 +623,7 @@ blocks:
   name: 99g Full Descriptive Statistics
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -643,7 +642,7 @@ blocks:
   name: 07 Scenario Rankings
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -663,7 +662,7 @@ blocks:
   name: 99d HPSA File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -699,7 +698,7 @@ blocks:
   name: 05 Provider-Scarcity Measure
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -718,7 +717,7 @@ blocks:
   name: 09 Primary Results
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600

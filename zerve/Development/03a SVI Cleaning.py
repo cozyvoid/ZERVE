@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # ── Paths ────────────────────────────────────────────────────────────────────
-SVI_PATH = "cdc_svi_ca_county_2022.csv"
+SVI_PATH = "california_healthcare_access/cdc_svi_ca_county_2022.csv"
 
 # ── 1. Load raw file — dtype=str preserves leading zeros in FIPS codes ───────
 svi_raw = pd.read_csv(SVI_PATH, dtype=str)

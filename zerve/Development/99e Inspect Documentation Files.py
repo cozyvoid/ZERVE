@@ -7,8 +7,8 @@ Block 03d: Documentation files — targeted field lookups
 import pandas as pd
 import os
 
-HPSA_DICT_PATH = "hrsa_hpsa_data_dictionary_2026-06-25.xlsx"
-SVI_PDF_PATH   = "cdc_svi_2022_data_dictionary_tract_county_zcta.pdf"
+HPSA_DICT_PATH = "california_healthcare_access/hrsa_hpsa_data_dictionary_2026-06-25.xlsx"
+SVI_PDF_PATH   = "california_healthcare_access/cdc_svi_2022_data_dictionary_tract_county_zcta.pdf"
 
 pd.set_option("display.max_colwidth", 600)
 pd.set_option("display.width", 250)

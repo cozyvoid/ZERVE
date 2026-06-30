@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # ── Load raw HPSA file ────────────────────────────────────────────────────────
-HPSA_PATH = "hrsa_primary_care_hpsa_national_2026-06-25.csv"
+HPSA_PATH = "california_healthcare_access/hrsa_primary_care_hpsa_national_2026-06-25.csv"
 hpsa_raw = pd.read_csv(HPSA_PATH, dtype=str, low_memory=False)
 print(f"National HPSA raw shape: {hpsa_raw.shape}")
 
