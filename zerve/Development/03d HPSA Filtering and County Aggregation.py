@@ -32,7 +32,7 @@ print(f"After filter — Primary Care only    : {len(hpsa_pc):>6} rows | "
       f"{hpsa_pc['HPSA ID'].nunique():>5} distinct HPSA IDs")
 
 # ── STEP 3: Designation type classification ───────────────────────────────────
-# Exact values from metadata (confirmed in 03c inspection output).
+# Exact values from metadata (confirmed in 99d inspection output).
 # Geographic/Population = area-wide or population-group shortages.
 # Facility = shortage tied to a specific provider site, NOT the whole county.
 GEO_POP_TYPES = {

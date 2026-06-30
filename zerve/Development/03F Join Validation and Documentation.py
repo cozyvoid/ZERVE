@@ -214,7 +214,7 @@ decisions = [
     ("SVI county_name_std",
      "Trailing ' County' stripped for name-matching only. Original county_name retained unchanged in final table."),
     ("AHRF header at row 3 (0-indexed)",
-     "Rows 0-2 are title/filter rows. Confirmed in 03b inspection. Using header=3 gives correct 5-column names."),
+     "Rows 0-2 are title/filter rows. confirmed in 99c inspection. Using header=3 gives correct 5-column names."),
     ("AHRF footer dropped",
      "1 row starting with 'Note: Blank cells...' removed. Not a data row."),
     ("AHRF zero-physician counties kept",

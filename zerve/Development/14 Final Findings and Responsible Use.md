@@ -64,7 +64,7 @@ The county-count framing identifies predominantly **smaller, rural, and agricult
 
 **Category A (high historical priority + current HPSA):** 10 counties — the majority of the top quartile is HPSA-designated, indicating general alignment.
 
-**Category B (high historical priority, NO current geo/pop HPSA):** 4 counties — **Yuba, Colusa, Madera, and Lassen**. These counties score in the top 14 historically but lack an active geographic/population HPSA. This warrants closer attention, though possible explanations include: sub-county provider distribution that satisfies HPSA adequacy criteria at the designation level; different provider types included in HPSA criteria beyond AHRF physician count; near-threshold positions; or the 4-year gap between the 2022 data and the 2026 HPSA snapshot.
+**Category B (high historical priority, no current geo/pop HPSA): 4 counties — Yuba, Colusa, Madera, and Lassen. These counties rank in the top 14 under the historical balanced score but do not have an active current geographic/population HPSA designation. This warrants closer review rather than assuming that either the historical score or the current designation is incorrect. Possible explanations include sub-county provider distribution, differences between the AHRF physician-count measure and HPSA eligibility criteria, near-threshold designation status, or the four-year gap between the 2022 historical data and the 2026 HPSA snapshot.
 
 **Category C (current HPSA, lower historical priority):** 24 counties — these designations likely reflect sub-county geographic areas, specific population-group HPSAs (e.g. migrant workers, low-income populations), or earlier designation criteria. They should not be dismissed; they indicate the HPSA system captures dimensions the county-level physician-count measure does not.
 
@@ -72,9 +72,9 @@ The county-count framing identifies predominantly **smaller, rural, and agricult
 
 ## 7. Zero-provider rural counties
 
-**Alpine and Sierra counties** both have zero recorded primary-care physicians in 2022. They receive the **highest possible provider_scarcity value (0.991)** — tied by construction since the rank-based method assigns average ranks. Their balanced scores place them at ranks 14 and 22 respectively, reflecting their moderate overall SVI scores (0.474 and 0.482). They appear in the top quartile under the access-focused scenario (ranks 14 and 15) but move lower under equity-focused weighting.
+Alpine and Sierra counties both have zero recorded primary-care physicians in the 2022 AHRF data. Because the provider-scarcity measure uses average ranks for tied values, both counties receive the same provider-scarcity value of approximately 0.991. Their balanced results differ because their overall SVI values are lower: Alpine has an overall SVI percentile of 0.158 and a balanced rank of 27, while Sierra has an overall SVI percentile of 0.105 and a balanced rank of 29. Under the access-focused scenario, Alpine rises to rank 14 and Sierra rises to rank 15. Alpine therefore reaches the top-quartile cutoff, while Sierra falls immediately below it. Both counties move lower under equity-focused weighting because that scenario places more weight on social vulnerability.
 
-> Planning note: with populations of ~1,190 and ~3,217, these counties are micro-populations. Resource-planning conclusions for these counties should be informed by context (proximity to neighboring counties, travel time to care, telehealth capacity) that is not captured in this county-level framework.
+> Planning note: With AHRF populations of approximately 1,190 and 3,217, Alpine and Sierra are micro-population counties. Their zero-provider counts are important, but resource-planning conclusions should also consider cross-county travel, proximity to providers in neighboring counties, telehealth capacity, and the instability of per-capita rates in very small populations.
 
 ---
 

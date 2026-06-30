@@ -25,7 +25,7 @@ cps   = county_priority_scores.copy()
 thm   = county_dominant_svi_theme.copy()
 
 print("=" * 70)
-print("20 · MILESTONE 5 — DASHBOARD DEPLOYMENT VALIDATION")
+print("99l · DEPLOYMENT VALIDATION")
 print("=" * 70)
 
 print("\n── Data completeness ────────────────────────────────────────────────")

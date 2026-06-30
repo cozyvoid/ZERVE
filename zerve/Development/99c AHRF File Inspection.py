@@ -54,13 +54,13 @@ print(f"\n── Numeric summary ───────────────�
 # Rename columns for easy reference
 col_map = {
     ahrf_raw_clean.columns[0]: "county_label",
-    ahrf_raw_clean.columns[1]: "pc_physicians_2022",
-    ahrf_raw_clean.columns[2]: "population_2022",
-    ahrf_raw_clean.columns[3]: "rate_per_100k",
+    ahrf_raw_clean.columns[1]: "primary_care_physicians_2022",
+    ahrf_raw_clean.columns[2]: "ahrf_population_2022",
+    ahrf_raw_clean.columns[3]: "supplied_rate_per_100000",
     ahrf_raw_clean.columns[4]: "source"
 }
 ahrf_display = ahrf_raw_clean.rename(columns=col_map)
-print(ahrf_display[["pc_physicians_2022","population_2022","rate_per_100k"]].describe())
+print(ahrf_display[["primary_care_physicians_2022","ahrf_population_2022","supplied_rate_per_100000"]].describe())
 
 print(f"\n── Unique county count ───────────────────────────────────────")
 print(f"  {ahrf_raw_clean.shape[0]} county rows (expected 58 for California)")

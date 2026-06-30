@@ -1,4 +1,4 @@
-# California Healthcare Access Priority Explorer — Application README
+# 13 Interactive Dashboard — Application README and Deployment Information
 
 ## Overview
 An interactive Streamlit dashboard that explores where high social vulnerability and limited primary-care physician availability overlap across California's 58 counties. All results are **exploratory** — they are intended to support further investigation and resource-planning discussions, not to automatically allocate resources.
@@ -21,14 +21,14 @@ An interactive Streamlit dashboard that explores where high social vulnerability
 
 | Variable | Source block | Purpose |
 |----------|-------------|---------|
-| `balanced_priority_results` | `14 · Primary Results Table` | Primary county scoring and ranking table |
-| `scenario_rankings` | `12 · Scenario Rankings` | Long-form 4-scenario ranking table |
-| `rank_stability_summary` | `13 · Ranking-Stability Analysis` | Rank variability across scenarios |
-| `population_impact_context` | `15 · Population Context` | 2×2 planning classification |
-| `hpsa_alignment_summary` | `16 · HPSA Alignment Analysis` | Historical score vs current HPSA comparison |
-| `county_dominant_svi_theme` | `09f · SVI Theme Analysis` | Dominant vulnerability theme per county |
-| `exploratory_review_conditions` | `09g · Candidate Counties for Closer Review` | Multi-condition exploratory flags |
-| `county_priority_scores` | `10 · Provider-Scarcity Measure` | Full scoring table with all 4 scenarios |
+| `balanced_priority_results` | `09 · Primary Results` | Primary county scoring and ranking table |
+| `scenario_rankings` | `07 · Scenario Rankings` | Long-form 4-scenario ranking table |
+| `rank_stability_summary` | `08 · Ranking-Stability` | Rank variability across scenarios |
+| `population_impact_context` | `10 · Population Impact Context` | 2×2 planning classification |
+| `hpsa_alignment_summary` | `11 · HPSA Alignment` | Historical score vs current HPSA comparison |
+| `county_dominant_svi_theme` | `99h · SVI Theme Analysis` | Dominant vulnerability theme per county |
+| `exploratory_review_conditions` | `99i · Exploratory Candidate Conditions` | Multi-condition exploratory flags |
+| `county_priority_scores` | `06 · Provider-Scarcity Scenarios` | Full scoring table with all 4 scenarios |
 
 ---
 
@@ -69,4 +69,4 @@ All components are relative California-county percentiles in [0, 1]. Higher = hi
 - Compute: medium
 - Data: loaded at startup via `zerve.variable()` from validated Milestone 4 canvas blocks
 - Preview deployment: started 2026-06-25
-- Validation: 30/30 checks passed (block `20 · Dashboard Deployment Validation`)
+- Validation: 30/30 checks passed in the Technical Appendix deployment-validation block.

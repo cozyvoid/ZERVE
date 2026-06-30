@@ -47,14 +47,14 @@ _entries = [
     ("AHRF", "County",         "str",    "County name + state abbr (e.g., 'Alameda County, CA')",
      "No native FIPS. Strip ', CA' and match to SVI.COUNTY to derive FIPS."),
 
-    ("AHRF", "pc_physicians_2022", "float", "Primary care physician count (AMA 2022)",
+    ("AHRF", "primary_care_physicians_2022", "float", "Primary care physician count (AMA 2022)",
      "0 is valid (Alpine, Sierra). Source: AMA Physician Professional Data 2022."),
 
-    ("AHRF", "population_2022",   "float", "Total county population (Census 2022 estimate)",
+    ("AHRF", "ahrf_population_2022",   "float", "Total county population (Census 2022 estimate)",
      "Differs slightly from SVI E_TOTPOP (ACS 2018-22). Use as rate denominator."),
 
-    ("AHRF", "rate_per_100k",     "float", "Supplied rate: physicians per 100,000 residents",
-     "Validation only. Recalculate: (pc_physicians_2022 / population_2022) * 100_000."),
+    ("AHRF", "supplied_rate_per_100000",     "float", "Supplied rate: physicians per 100,000 residents",
+     "Validation only. Recalculate: (primary_care_physicians_2022 / population_2022) * 100_000."),
 
     ("AHRF", "[no FIPS column]",  "—",     "FIPS must be engineered via name-matching",
      "Parse 'County, CA' → strip ', CA' → match SVI.COUNTY → join to get STCNTY."),

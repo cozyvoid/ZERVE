@@ -213,9 +213,9 @@ print("-" * 72)
 _periods = [
     ["SVI RPL_THEMES / RPL_THEME1-4",   "2022 (ACS 2018–2022 5-yr estimates)", "CA-specific county percentile rankings"],
     ["SVI E_TOTPOP",                     "2018–2022 ACS 5-year estimate",       "Vintage matches RPL fields"],
-    ["AHRF pc_physicians_2022",          "2022 (AMA Physician Professional Data)", "County-level physician count"],
+    ["AHRF primary_care_physicians_2022",          "2022 (AMA Physician Professional Data)", "County-level physician count"],
     ["AHRF population_2022",             "2022 (Census County Pop. Estimates)", "Denominator for rate calculation"],
-    ["AHRF rate_per_100k",               "2022",                                "Supplied rate — recalculate to validate"],
+    ["AHRF supplied_rate_per_100000",               "2022",                                "Supplied rate — recalculate to validate"],
     ["HPSA Designation Type/Status",     "Current snapshot (2026-06-25)",       "⚠  Not a 2022 measure; use as indicator only"],
     ["HPSA HPSA Score",                  "Current snapshot (2026-06-25)",       "⚠  Treat as current status, not 2022 data"],
 ]
@@ -288,7 +288,7 @@ print("""
   2. AHRF 'Rate (per 100,000)' — denominator population version unclear
      (Census 2022 estimate vs ACS). Recalculate as:
        rate_per_10k = (physicians / population) * 10_000
-     and cross-check against supplied rate_per_100k / 10.
+     and cross-check against supplied supplied_rate_per_100000 / 10.
 
   3. HPSA 'HPSA Score' — scale is 0–25 (higher = greater shortage).
      Confirmed max=24 for CA designated rows. Verify no scores >25.

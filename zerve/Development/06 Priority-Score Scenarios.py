@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# ── Input: base scoring dataframe from Block 10 ──────────────────────────────
+# ── Input from the validated joined table in 03f ──────────────────────────────
 ps = county_priority_scores.copy()
 
 # ── Scenario weight definitions ───────────────────────────────────────────────

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# ── Path and header row (confirmed in 03b inspection) ────────────────────────
+# ── Path and header row (confirmed in 99c inspection) ────────────────────────
 AHRF_PATH   = "hrsa_ahrf_ca_county_primary_care_physicians_population_2022.xlsx"
 HEADER_ROW  = 3  # 0-indexed; row 4 in Excel contains the actual column names
 
