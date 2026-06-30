@@ -8,12 +8,26 @@ An interactive Streamlit dashboard that explores where high social vulnerability
 ## Application sections and user interactions
 
 | Tab | Section | Key interactions |
-|-----|---------|-----------------|
-| **1 · Overview** | High-level KPI metrics, top-15 bar chart, scatterplot, principal findings | View-only; summary statistics update from validated data |
+|-----|---------|-----------------| 
+| **1 · Overview** | High-level KPI metrics, top-15 horizontal ranked bar chart, scatterplot, principal findings | View-only; summary statistics update from validated data |
 | **2 · County Explorer** | Full county profile with scores, ranks, rates, SVI themes, HPSA status | Searchable county dropdown; all 58 counties selectable; zero-provider note for Alpine/Sierra |
-| **3 · Scenario Comparison** | Top-15 by scenario, rank-stability bubble chart, scenario agreement, county rank look-up | Select Balanced / Access-focused / Equity-focused / Empirical themes / Custom; custom weight slider auto-balances to 100% |
-| **4 · HPSA Alignment** | Alignment category table, score boxplot by HPSA status, disagreement county tables | View-only; 2022 vs 2026 data clearly separated |
+| **3 · Scenario Comparison** | Top-15 scenario-comparison grouped bar chart, rank-stability bump chart, scenario agreement, county rank look-up | Select Balanced / Access-focused / Equity-focused / Empirical themes / Custom; custom weight slider auto-balances to 100% |
+| **4 · HPSA Alignment** | Alignment category table, boxplot of score distribution by HPSA status, disagreement county tables | View-only; 2022 vs 2026 data clearly separated |
 | **5 · Methodology & Limitations** | Data sources, core measures, scoring formulas, important distinctions, limitations, validation table | Expandable sections |
+
+---
+
+## Visualization methods
+
+| Chart type | Where used | What it shows |
+|------------|-----------|---------------|
+| **Horizontal ranked bar chart** | Tab 1 Overview; Tab 3 Scenario Comparison | Top-15 counties ranked by balanced priority score; bars annotated with score and rank |
+| **Scenario-comparison grouped bar chart** | Tab 3 Scenario Comparison | All four weighting scenarios side-by-side for the top-15 counties; reveals which counties are sensitive to weight choice |
+| **Annotated heatmap** | Tab 2 County Explorer | SVI vulnerability dimensions (socioeconomic, household, racial/ethnic, housing/transport) × selected counties; dominant dimension highlighted |
+| **Histograms** | Tab 1 Overview; Tab 2 County Explorer | Physician rate distribution; raw physician count distribution; county population distribution |
+| **Scatterplot** | Tab 1 Overview; Tab 3 Scenario Comparison | Social vulnerability vs primary-care access (quadrant view); provider scarcity vs SVI with score as color; balanced score vs county population |
+| **Boxplot** | Tab 4 HPSA Alignment | Balanced score distribution by current geo/pop HPSA status (2026 snapshot vs 2022 data) |
+| **Bump/rank-movement chart** | Tab 3 Scenario Comparison | Rank trajectory of top-20 counties across all four scenarios; identifies stable vs sensitive counties |
 
 ---
 
@@ -70,3 +84,6 @@ All components are relative California-county percentiles in [0, 1]. Higher = hi
 - Data: loaded at startup via `zerve.variable()` from validated Milestone 4 canvas blocks
 - Preview deployment: started 2026-06-25
 - Validation: 30/30 checks passed in the Technical Appendix deployment-validation block.
+
+- **Live application:** [Open the deployed dashboard](PASTE_DEPLOYED_APP_LINK_HERE)
+- **Project notebook:** [View the Zerve project](PASTE_NOTEBOOK_LINK_HERE)

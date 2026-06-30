@@ -3,6 +3,11 @@
 ## Objective
 Identify California counties where **high social vulnerability** overlaps with **limited primary-care physician capacity**, to support resource-planning and funding discussions.
 
+## Project Links
+
+- **Interactive dashboard:** [Open the California Healthcare Access Priority Explorer](PASTE_DEPLOYED_APP_LINK_HERE)
+- **Zerve notebook:** [View the complete analytical notebook](PASTE_NOTEBOOK_LINK_HERE)
+
 ## Intended Audience
 Public-health program managers · Healthcare network planners · Nonprofit funding organizations · County health administrators
 

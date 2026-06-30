@@ -25,7 +25,7 @@ layers:
     name: 99h SVI Theme Analysis
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -44,7 +44,7 @@ layers:
     name: 06 Priority-Score Scenarios
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -62,7 +62,7 @@ layers:
     name: 03c AHRF-to-FIPS Mapping
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -81,7 +81,7 @@ layers:
     name: 99b SVI File Inspection
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -100,7 +100,7 @@ layers:
     name: 04e Population Context
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -127,11 +127,29 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Summarizes county-level healthcare access prioritization findings
-      for California, highlighting consistent top performers (Imperial, Kings, Merced),
-      scenario-sensitive counties, population impact, and HPSA alignment. Emphasizes
-      limitations of county-level analysis and responsible use as exploratory decision-support,
-      not formula.
+    description: Markdown section header introducing the analysis conclusions, including
+      validated findings, limitations, and responsible-use guidance from the analytical
+      workflow.
+    height: 1000
+    id: 37cb3c96-3a43-400b-90b2-8eb16738b3a6
+    layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
+    name: Analysis Conclusions
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 50000
+    y: 24900
+  - auto_size: false
+    canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
+    compute_settings: null
+    description: "Summarizes California county prioritization findings across four\
+      \ scenarios (balanced, equity, access, empirical). Imperial County is top-ranked\
+      \ in all scenarios; 9 counties consistently in top 10. Framework is exploratory\
+      \ only\u2014not an official designation or funding formula. Highlights scenario\
+      \ sensitivity, HPSA alignment, and responsible-use limitations."
     height: 1000
     id: 4753193f-9a3a-4d84-a408-3bd7e75c7ceb
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -147,17 +165,18 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Generates 6 exploratory visualizations comparing county healthcare
-      priority scores across 4 weighting scenarios, including rank movement, score
-      distribution by HPSA status, and relationships between provider scarcity and
-      social vulnerability.
+    description: Generates 6 exploratory priority-ranking visualizations comparing
+      California counties across balanced/equity/access scenarios. Creates horizontal
+      ranked bar charts, scenario-comparison grouped bars, rank movement bump plots,
+      and scatter/box plots showing relationship between provider scarcity, social
+      vulnerability, HPSA status, and population.
     height: 1000
     id: 558a2e19-e3a2-438b-bed9-194dbccf305d
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
     name: 12 Final Visualizations
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -177,7 +196,7 @@ layers:
     name: 03a SVI Cleaning
     parent_id: null
     properties: {}
-    status: 3
+    status: 4
     type: 1
     variables: null
     width: 1600
@@ -196,7 +215,7 @@ layers:
     name: 99f Data Quality Audit
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -214,7 +233,7 @@ layers:
     name: 03e County-Level Left Join
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -233,7 +252,7 @@ layers:
     name: 11 HPSA Alignment
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -252,7 +271,7 @@ layers:
     name: 99e Inspect Documentation Files
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -261,11 +280,12 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Interactive Streamlit dashboard that explores overlaps between high
-      social vulnerability and limited primary-care physician availability across
-      California's 58 counties. Features include county profiles, scenario comparisons,
-      HPSA alignment analysis, and methodology documentation for exploratory resource-planning
-      support.
+    description: "Interactive Streamlit dashboard that identifies California counties\
+      \ where high social vulnerability and limited primary-care physician availability\
+      \ overlap. Provides five tabs: Overview (KPIs & rankings), County Explorer (detailed\
+      \ profiles), Scenario Comparison (weighting scenarios), HPSA Alignment (status\
+      \ comparison), and Methodology\u2014supporting exploratory resource-planning\
+      \ discussions."
     height: 1000
     id: 76ccc162-7bbc-40d2-8f1e-dfd40d646be1
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -281,11 +301,11 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: 'Visualizes physician access distribution across California counties
-      through 5 charts: (1) physician rate histogram with median, (2) bar chart of
-      counties at highest/lowest social vulnerability, (3) heatmap of vulnerability
-      dimensions by county, (4) raw physician count distribution, and (5) county population
-      spread. Identifies zero-physician counties, outliers, and inequities.'
+    description: 'Creates five styled visualizations analyzing California healthcare
+      access and social vulnerability: physician distribution (histograms), SVI rankings
+      by county, vulnerability dimension heatmap, and demographic comparisons. Includes
+      annotations flagging data anomalies (zero-physician, high-rate, small-population
+      counties).'
     height: 1000
     id: 7814c754-f617-4bb9-863e-dbb8a90d5808
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -311,7 +331,7 @@ layers:
     name: 99j Exploratory Data-Quality Checks
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -330,7 +350,7 @@ layers:
     name: 08 Ranking-Stability
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -352,7 +372,7 @@ layers:
     name: 99k Analytical Validation
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -371,7 +391,7 @@ layers:
     parent_id: null
     properties:
       interactive_execution: true
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -390,7 +410,7 @@ layers:
     name: 04b Vulnerability and Provider Access
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -409,7 +429,7 @@ layers:
     name: 99i Exploratory Candidate Conditions
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -428,7 +448,7 @@ layers:
     name: 03d HPSA Filtering and County Aggregation
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -448,7 +468,7 @@ layers:
     name: 10 Population Impact Context
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -467,7 +487,7 @@ layers:
     name: 04d HPSA Descriptive Comparison
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -485,7 +505,7 @@ layers:
     name: 99l Deployment Validation
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -504,7 +524,7 @@ layers:
     name: 99c AHRF File Inspection
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -525,7 +545,7 @@ layers:
     name: 03F Join Validation and Documentation
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -544,7 +564,7 @@ layers:
     name: 03b AHRF Cleaning
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -553,10 +573,11 @@ layers:
   - auto_size: false
     canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     compute_settings: null
-    description: Project overview for identifying California counties with high social
-      vulnerability and limited primary-care physician capacity to guide healthcare
-      resource planning and funding allocation across public health and nonprofit
-      organizations.
+    description: Overview of a California healthcare access analysis identifying counties
+      with high social vulnerability and limited primary-care physician capacity.
+      Outlines project objectives, data sources (CDC SVI, HRSA data), intended audience
+      (health program managers, network planners, nonprofits), analytical ground rules,
+      and scope of five completed milestones.
     height: 1000
     id: c5e7a01e-5f40-4414-8421-fb7015ae5826
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -600,7 +621,7 @@ layers:
     name: 04c Correlation Analysis
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -637,7 +658,7 @@ layers:
     name: 99g Full Descriptive Statistics
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -656,7 +677,7 @@ layers:
     name: 07 Scenario Rankings
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -676,7 +697,7 @@ layers:
     name: 99d HPSA File Inspection
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -712,7 +733,7 @@ layers:
     name: 05 Provider-Scarcity Measure
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -731,7 +752,7 @@ layers:
     name: 09 Primary Results
     parent_id: null
     properties: {}
-    status: 3
+    status: 1
     type: 1
     variables: null
     width: 1600
@@ -749,11 +770,6 @@ layers:
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
     source: 35bbb5d7-cd3a-43f5-9cf0-df7051930c74
     target: daee21be-92e4-471d-84ae-38ea235382d0
-  - canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
-    id: 0cb50857-d804-4fce-b7fc-19e4df1dd0ed
-    layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
-    source: 76ccc162-7bbc-40d2-8f1e-dfd40d646be1
-    target: 4753193f-9a3a-4d84-a408-3bd7e75c7ceb
   - canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     id: 111cb4d3-c4df-4d89-8083-096d8fe02ba7
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -784,6 +800,16 @@ layers:
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
     source: e16341f5-1306-4b9f-84b0-668d574b2dc0
     target: 00bbb15c-b046-414f-a5de-7c6316d9f641
+  - canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
+    id: 2bc724b3-30c8-46b4-b61b-2274596c59a2
+    layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
+    source: 37cb3c96-3a43-400b-90b2-8eb16738b3a6
+    target: 4753193f-9a3a-4d84-a408-3bd7e75c7ceb
+  - canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
+    id: 2be90fa2-206a-4e62-bbb1-d8f5f8a78fe4
+    layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
+    source: 76ccc162-7bbc-40d2-8f1e-dfd40d646be1
+    target: 37cb3c96-3a43-400b-90b2-8eb16738b3a6
   - canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
     id: 321078e9-7394-4698-aabc-da37cb694f9e
     layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
