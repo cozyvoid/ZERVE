@@ -17,7 +17,7 @@ blocks:
   name: 99h SVI Theme Analysis
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -36,7 +36,7 @@ blocks:
   name: 06 Priority-Score Scenarios
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -54,7 +54,7 @@ blocks:
   name: 03c AHRF-to-FIPS Mapping
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -73,7 +73,7 @@ blocks:
   name: 99b SVI File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -92,7 +92,7 @@ blocks:
   name: 04e Population Context
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -168,7 +168,7 @@ blocks:
   name: 12 Final Visualizations
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -187,7 +187,7 @@ blocks:
   name: 03a SVI Cleaning
   parent_id: null
   properties: {}
-  status: 4
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -206,7 +206,7 @@ blocks:
   name: 99f Data Quality Audit
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -224,7 +224,7 @@ blocks:
   name: 03e County-Level Left Join
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -243,7 +243,7 @@ blocks:
   name: 11 HPSA Alignment
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -262,7 +262,7 @@ blocks:
   name: 99e Inspect Documentation Files
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -271,11 +271,10 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: "Interactive Streamlit dashboard that identifies California counties\
-    \ where high social vulnerability and limited primary-care physician availability\
-    \ overlap. Provides five tabs: Overview (KPIs & rankings), County Explorer (detailed\
-    \ profiles), Scenario Comparison (weighting scenarios), HPSA Alignment (status\
-    \ comparison), and Methodology\u2014supporting exploratory resource-planning discussions."
+  description: Interactive Streamlit dashboard visualizing social vulnerability and
+    primary-care physician access across California's 58 counties, with 5 tabs covering
+    KPI metrics, county profiles, scenario comparisons, HPSA alignment, and methodology
+    documentation for exploratory resource-planning analysis.
   height: 1000
   id: 76ccc162-7bbc-40d2-8f1e-dfd40d646be1
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -302,7 +301,7 @@ blocks:
   name: 04a Access and Vulnerability Visualizations
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -321,7 +320,7 @@ blocks:
   name: 99j Exploratory Data-Quality Checks
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -340,7 +339,7 @@ blocks:
   name: 08 Ranking-Stability
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -362,7 +361,7 @@ blocks:
   name: 99k Analytical Validation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -381,7 +380,7 @@ blocks:
   parent_id: null
   properties:
     interactive_execution: true
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -400,7 +399,7 @@ blocks:
   name: 04b Vulnerability and Provider Access
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -419,7 +418,7 @@ blocks:
   name: 99i Exploratory Candidate Conditions
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -437,7 +436,7 @@ blocks:
   name: 03d HPSA Filtering and County Aggregation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -457,7 +456,7 @@ blocks:
   name: 10 Population Impact Context
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -476,7 +475,7 @@ blocks:
   name: 04d HPSA Descriptive Comparison
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -494,7 +493,7 @@ blocks:
   name: 99l Deployment Validation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -513,7 +512,7 @@ blocks:
   name: 99c AHRF File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -534,7 +533,7 @@ blocks:
   name: 03F Join Validation and Documentation
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -553,7 +552,7 @@ blocks:
   name: 03b AHRF Cleaning
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -562,11 +561,10 @@ blocks:
 - auto_size: false
   canvas_id: a92b63d6-e325-4677-83ab-4f9b31aee4b6
   compute_settings: null
-  description: Overview of a California healthcare access analysis identifying counties
-    with high social vulnerability and limited primary-care physician capacity. Outlines
-    project objectives, data sources (CDC SVI, HRSA data), intended audience (health
-    program managers, network planners, nonprofits), analytical ground rules, and
-    scope of five completed milestones.
+  description: 'Project overview for California Healthcare Access Priority Explorer:
+    identifies CA counties where high social vulnerability overlaps with limited primary-care
+    physician capacity using CDC Social Vulnerability Index and HRSA provider data
+    to support health planning and funding decisions.'
   height: 1000
   id: c5e7a01e-5f40-4414-8421-fb7015ae5826
   layer_id: 148024a5-1599-44ab-bfc6-7496eb376b8c
@@ -610,7 +608,7 @@ blocks:
   name: 04c Correlation Analysis
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -646,7 +644,7 @@ blocks:
   name: 99g Full Descriptive Statistics
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -665,7 +663,7 @@ blocks:
   name: 07 Scenario Rankings
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -685,7 +683,7 @@ blocks:
   name: 99d HPSA File Inspection
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -721,7 +719,7 @@ blocks:
   name: 05 Provider-Scarcity Measure
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600
@@ -740,7 +738,7 @@ blocks:
   name: 09 Primary Results
   parent_id: null
   properties: {}
-  status: 1
+  status: 3
   type: 1
   variables: null
   width: 1600

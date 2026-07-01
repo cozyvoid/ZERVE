@@ -5,8 +5,8 @@ Identify California counties where **high social vulnerability** overlaps with *
 
 ## Project Links
 
-- **Interactive dashboard:** [Open the California Healthcare Access Priority Explorer](PASTE_DEPLOYED_APP_LINK_HERE)
-- **Zerve notebook:** [View the complete analytical notebook](PASTE_NOTEBOOK_LINK_HERE)
+- **Interactive dashboard:** [Open the California Healthcare Access Priority Explorer](Phttps://7597cb6d-8c1f411d.hub.zerve.cloud)
+- **Zerve notebook:** [View the complete analytical notebook](https://app.zerve.ai/notebook/a92b63d6-e325-4677-83ab-4f9b31aee4b6)
 
 ## Intended Audience
 Public-health program managers · Healthcare network planners · Nonprofit funding organizations · County health administrators

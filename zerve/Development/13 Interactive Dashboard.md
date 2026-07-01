@@ -85,5 +85,5 @@ All components are relative California-county percentiles in [0, 1]. Higher = hi
 - Preview deployment: started 2026-06-25
 - Validation: 30/30 checks passed in the Technical Appendix deployment-validation block.
 
-- **Live application:** [Open the deployed dashboard](PASTE_DEPLOYED_APP_LINK_HERE)
-- **Project notebook:** [View the Zerve project](PASTE_NOTEBOOK_LINK_HERE)
+- **Live application:** [Open the deployed dashboard](https://7597cb6d-8c1f411d.hub.zerve.cloud)
+- **Project notebook:** [View the Zerve project](https://app.zerve.ai/notebook/a92b63d6-e325-4677-83ab-4f9b31aee4b6)
